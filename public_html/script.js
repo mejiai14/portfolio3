@@ -16,6 +16,10 @@ $("document").ready(function() {
     
     $('p:first').css('background-color', 'blue');
     
+    $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+  
+    $('h1').bind('click', mouseClick);
+    
     $('#replaceWText').bind('click', replaceWText);
     
     $('#randPara').bind('click', addAPara);
@@ -27,23 +31,26 @@ function removeAPara() {
 }
 
 function addAPara() {
-    $('#randPara').append('<p></p>');
+    $('#randPara').append('<p>Down</p>');
 }
 
 function replaceWText() {
-    $('#replaceWText').text('');
+    $('#replaceWText').text('Promise');
 }
    
 
 function mouseOverMe(){
-    $("h1").html("");
+    $("h1").html("OREOS");
 }
 
 function mouseOutMe(){
-    $('h1').html('');
+    $('h1').html('Chips Ahoy');
 }
 
-function mouseClick() {
-    
-    $('p').html('');
+function mouseClick() {    
+    $('p').html('Papaya');
+}
+
+function hideTheImage() {
+    $('#logo').hide('puff', {}, 2500);
 }
