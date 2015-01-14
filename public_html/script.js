@@ -25,6 +25,12 @@ $("document").ready(function() {
     $('#randPara').bind('click', addAPara);
     
     $('#removePara').bind('click', removeAPara);
+    
+    $('#show').css('visibility', 'hidden');
+    
+    $('#hide').bind('click', hideTheImage);
+    
+    $('#show').bind('click', showTheImage);
 });
 function removeAPara() {
     $('#randPara p:last').remove();
@@ -52,5 +58,12 @@ function mouseClick() {
 }
 
 function hideTheImage() {
-    $('#logo').hide('puff', {}, 2500);
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
+}
+
+function showTheImage () {
+    $('div').show('fold', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
 }
