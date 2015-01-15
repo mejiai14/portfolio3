@@ -31,8 +31,10 @@ $("document").ready(function() {
     $('#hide').bind('click', hideTheImage);
     
     $('#show').bind('click', showTheImage);
+    
+    $('#superHumans').accordion({header: "h2"});
 });
-function removeAPara() {
+function removeAPara() { 
     $('#randPara p:last').remove();
 }
 
